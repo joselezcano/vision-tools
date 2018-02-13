@@ -43,7 +43,7 @@ import com.google.api.services.vision.v1.model.Image;
 
 public class FaceDetectionActivity extends AppCompatActivity {
 
-    private static final String CLOUD_VISION_API_KEY = "<put your Vision API here>";
+    private static final String CLOUD_VISION_API_KEY = "<put your Vision API key here>";
     private static final String ANDROID_CERT_HEADER = "X-Android-Cert";
     private static final String ANDROID_PACKAGE_HEADER = "X-Android-Package";
     private static final int REQUEST_IMAGE_CAPTURE = 1;
