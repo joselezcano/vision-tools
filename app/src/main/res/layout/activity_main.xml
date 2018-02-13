@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.visiontools.MainActivity">
+
+    <Button
+        android:id="@+id/textDetectionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="48dp"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:text="Text Detection" />
+
+    <Button
+        android:id="@+id/labelDetectionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="48dp"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:text="Label Detection" />
+
+    <Button
+        android:id="@+id/faceDetectionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="48dp"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:text="Face Detection" />
+
+</LinearLayout>
