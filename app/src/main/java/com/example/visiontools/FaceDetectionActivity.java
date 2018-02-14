@@ -43,7 +43,7 @@ import com.google.api.services.vision.v1.model.Image;
 
 public class FaceDetectionActivity extends AppCompatActivity {
 
-    private static final String CLOUD_VISION_API_KEY = "<put your Vision API key here>";
+    private static final String CLOUD_VISION_API_KEY = "<insert your Vision API key here>";
     private static final String ANDROID_CERT_HEADER = "X-Android-Cert";
     private static final String ANDROID_PACKAGE_HEADER = "X-Android-Package";
     private static final int REQUEST_IMAGE_CAPTURE = 1;
@@ -79,7 +79,8 @@ public class FaceDetectionActivity extends AppCompatActivity {
                 new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT));
         pictureImageView.setScaleType(ImageView.ScaleType.FIT_CENTER);
         pictureImageView.setPadding(0, 0, 0, 0);
-        pictureImageView.setBackgroundColor(Color.WHITE);
+        pictureImageView.setBackgroundColor(Color.TRANSPARENT);
+        pictureImageView.setImageResource(R.mipmap.ic_launcher_foreground);
     }
 
     // Call on activity result (called after picture intent)

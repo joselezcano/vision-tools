@@ -43,7 +43,7 @@ tools:context="com.example.visiontools.FaceDetectionActivity">
             android:id="@+id/faceImageViewLinearLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="32dp"
+            android:layout_margin="16dp"
             android:layout_gravity="center"
             android:orientation="vertical" >
 
@@ -54,6 +54,7 @@ tools:context="com.example.visiontools.FaceDetectionActivity">
             android:layout_width="288dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:layout_marginTop="16dp"
             android:textStyle="bold|italic"
             android:text="Labels detected:"
             android:visibility="gone" />

@@ -4,6 +4,8 @@ import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Color;
+import android.graphics.Matrix;
+import android.graphics.RectF;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Handler;
@@ -12,6 +14,7 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.v4.content.FileProvider;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
@@ -39,7 +42,7 @@ import com.google.api.services.vision.v1.model.TextAnnotation;
 
 public class TextDetectionActivity extends AppCompatActivity {
 
-    private static final String CLOUD_VISION_API_KEY = "<put your Vision API key here>";
+    private static final String CLOUD_VISION_API_KEY = "<insert your Vision API key here>";
     private static final String ANDROID_CERT_HEADER = "X-Android-Cert";
     private static final String ANDROID_PACKAGE_HEADER = "X-Android-Package";
     private static final int REQUEST_IMAGE_CAPTURE = 1;
@@ -50,6 +53,7 @@ public class TextDetectionActivity extends AppCompatActivity {
     private DrawingImageView pictureImageView;
     private int bitmapHeight, bitmapWidth;
     private TextAnnotation textAnnotation = null;
+    private Matrix matrix = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -76,7 +80,8 @@ public class TextDetectionActivity extends AppCompatActivity {
                 new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT));
         pictureImageView.setScaleType(ImageView.ScaleType.FIT_CENTER);
         pictureImageView.setPadding(0, 0, 0, 0);
-        pictureImageView.setBackgroundColor(Color.WHITE);
+        pictureImageView.setBackgroundColor(Color.TRANSPARENT);
+        pictureImageView.setImageResource(R.mipmap.ic_launcher_foreground);
     }
 
     // Call on activity result (called after picture intent)
